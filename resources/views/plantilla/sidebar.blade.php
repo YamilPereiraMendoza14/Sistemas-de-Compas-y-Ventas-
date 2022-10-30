@@ -15,8 +15,8 @@
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('producto')}}" onclick="event.preventDefault();document.getElementById('producto-form')"><i class="fa fa-tasks"></i> Productos</a>
-                <form id="producto-form" action="{{ url('producto')}}">{{csrf_field()}}</form>
+                <a class="nav-link" href="{{ url('producto')}}" onclick="event.preventDefault();document.getElementById('producto-form').submit();"><i class="fa fa-tasks"></i> Productos</a>
+                <form id="producto-form" action="{{ url('producto') }}" style="display:none;">{{csrf_field()}}</form>
             </li>
                 
     

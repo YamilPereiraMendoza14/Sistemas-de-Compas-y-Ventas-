@@ -99,6 +99,34 @@
         // modal.find('.modal-title').text('New message to ' + recipient)
         modal.find('.modal-body #id_categoria').val(id_categoria);
     })
+    $('#abrirEditarProducto').on('show.bs.modal', function (event) {
+        
+        var button = $(event.relatedTarget) 
+        var id_categoria = button.data('id_categoria')
+        var nombre_modal_editar = button.data('nombre')
+        var precio_venta_modal_editar = button.data('precio_venta')
+        var codigo_modal_editar = button.data('codigo')
+        var stock_venta_modal_editar = button.data('stock')
+        var id_producto = button.data('id_producto')
+        var modal = $(this)
+        console.log(nombre_modal_editar);
+        // modal.find('.modal-title').text('New message to ' + recipient)
+        modal.find('.modal-body #id').val(id_categoria);
+        modal.find('.modal-body #nombre').val(nombre_modal_editar);
+        modal.find('.modal-body #precio_venta').val(precio_venta_modal_editar);        
+        modal.find('.modal-body #codigo').val(codigo_modal_editar);
+        modal.find('.modal-body #stock').val(stock_venta_modal_editar);
+        modal.find('.modal-body #id_producto').val(id_producto);
+    })
+    $('#abrirEstadoProducto').on('show.bs.modal', function (event) {
+        
+        var button = $(event.relatedTarget) 
+        var id_producto = button.data('id_producto')
+        var modal = $(this)
+   
+        // modal.find('.modal-title').text('New message to ' + recipient)
+        modal.find('.modal-body #id_producto').val(id_producto);
+    })
 </script>
 </body>
 
