@@ -30,7 +30,7 @@
                         </div>
                         {{Form::close()}}
                     </div>
-                </div>
+                </  div>
                 <table class="table table-bordered table-striped table-sm">
                     <thead>
                         <tr class="bg-primary">

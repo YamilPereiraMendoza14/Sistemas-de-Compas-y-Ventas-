@@ -11,12 +11,12 @@
             
             <li class="nav-item">
                 <a class="nav-link" href="{{ url('categoria') }}" onclick="event.preventDefault();document.getElementById('categoria-form').submit();"><i class="fa fa-list"></i> Categorías</a>
-                <form id="categoria-form" action="{{ url('categoria') }}" style="display:none;">{{csrf_field}}</form>
+                <form id="categoria-form" action="{{ url('categoria') }}" style="display:none;">{{csrf_field()}}</form>
             </li>
             
             <li class="nav-item">
-                <a class="nav-link" href="{{ url('productos')}}" onclick="event.preventDefault();document.getElementById('producto-form')"><i class="fa fa-tasks"></i> Productos</a>
-                <form id="producto-form" action="{{ url('producto')}}">{{csrf_field}}</form>
+                <a class="nav-link" href="{{ url('producto')}}" onclick="event.preventDefault();document.getElementById('producto-form')"><i class="fa fa-tasks"></i> Productos</a>
+                <form id="producto-form" action="{{ url('producto')}}">{{csrf_field()}}</form>
             </li>
                 
     
