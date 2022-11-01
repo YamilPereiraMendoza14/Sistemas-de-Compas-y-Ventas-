@@ -127,6 +127,29 @@
         // modal.find('.modal-title').text('New message to ' + recipient)
         modal.find('.modal-body #id_producto').val(id_producto);
     })
+
+    $('#abrirEditarProveedor').on('show.bs.modal', function (event) {
+        
+        var button = $(event.relatedTarget) 
+        var id_proveedor = button.data('id_proveedor')
+        var nombre_modal_editar = button.data('nombre')
+        var tipo_documento_modal_editar = button.data('tipo_documento')
+        var num_documento_modal_editar = button.data('num_documento')
+        var direccion_venta_modal_editar = button.data('direccion')
+        var telefeno = button.data('telefeno')
+        var email = button.data('email')
+        var modal = $(this)
+        console.log(nombre_modal_editar);
+        // modal.find('.modal-title').text('New message to ' + recipient)
+        modal.find('.modal-body #id_proveedor').val(id_proveedor);
+        modal.find('.modal-body #nombre').val(nombre_modal_editar);
+        modal.find('.modal-body #tipo_documento').val(tipo_documento_modal_editar);        
+        modal.find('.modal-body #num_documento').val(num_documento_modal_editar);
+        modal.find('.modal-body #direccion').val(direccion_venta_modal_editar);
+        modal.find('.modal-body #telefeno').val(telefeno);
+        modal.find('.modal-body #email').val(email);
+    })
+
 </script>
 </body>
 
