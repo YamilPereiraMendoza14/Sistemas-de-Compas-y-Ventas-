@@ -24,8 +24,9 @@
                 <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i> Compras</a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-users"></i> Proveedores</a>
+            <li class="nav-item">               
+                <a class="nav-link" href="{{ url('proveedor')}}" onclick="event.preventDefault();document.getElementById('proveedor-form').submit();"><i class="fa fa-tasks"></i> Proveedores</a>
+                <form id="proveedor-form" action="{{ url('proveedor') }}" style="display:none;">{{csrf_field()}}</form>
             </li>
                 
             
@@ -34,7 +35,9 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-users"></i> Clientes</a>
+               
+                <a class="nav-link" href="{{ url('cliente')}}" onclick="event.preventDefault();document.getElementById('cliente-form').submit();"><i class="fa fa-users"></i> Clientes</a>
+                <form id="clienteform" action="{{ url('cliente') }}" style="display:none;">{{csrf_field()}}</form>
             </li>
                 
             
