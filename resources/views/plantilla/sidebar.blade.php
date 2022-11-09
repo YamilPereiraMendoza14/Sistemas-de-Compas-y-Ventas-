@@ -37,7 +37,7 @@
             <li class="nav-item">
                
                 <a class="nav-link" href="{{ url('cliente')}}" onclick="event.preventDefault();document.getElementById('cliente-form').submit();"><i class="fa fa-users"></i> Clientes</a>
-                <form id="clienteform" action="{{ url('cliente') }}" style="display:none;">{{csrf_field()}}</form>
+                <form id="cliente-form" action="{{ url('cliente') }}" style="display:none;">{{csrf_field()}}</form>
             </li>
                 
             
@@ -46,7 +46,9 @@
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-list"></i> Roles</a>
+                
+                <a class="nav-link" href="{{ url('rol')}}" onclick="event.preventDefault();document.getElementById('rol-form').submit();"><i class="fa fa-list"></i> Roles</a>
+                <form id="rol-form" action="{{ url('rol') }}" style="display:none;">{{csrf_field()}}</form>
             </li>
                 
             
