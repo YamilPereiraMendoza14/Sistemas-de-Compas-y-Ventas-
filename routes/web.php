@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\RolController;
+use App\Http\Controllers\UserController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -26,3 +27,4 @@ Route::resource('producto',ProductoController::class);
 Route::resource('proveedor',ProveedorController::class);
 Route::resource('cliente',ClienteController::class);
 Route::resource('rol',RolController::class);
+Route::resource('user',UserController::class);

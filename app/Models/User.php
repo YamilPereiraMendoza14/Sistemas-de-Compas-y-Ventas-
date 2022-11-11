@@ -18,9 +18,18 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'id',        
+        'nombre',
+        'tipo_documento',
+        'num_documento',
+        'direccion',
+        'telefono',            
         'email',
+        'usuario',
         'password',
+        'condicion',
+        'idrol',
+        'imagen'
     ];
 
     /**
@@ -32,13 +41,15 @@ class User extends Authenticatable
         'password',
         'remember_token',
     ];
-
+    public function rol(){
+       return $this->belongsTo('App\Models\Rol'); 
+    }
     /**
      * The attributes that should be cast.
      *
      * @var array<string, string>
-     */
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    //  */
+    // protected $casts = [
+    //     'email_verified_at' => 'datetime',
+    // ];
 }

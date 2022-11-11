@@ -42,7 +42,9 @@
                 
             
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa fa-user"></i> Usuarios</a>
+                <a class="nav-link" href="{{ url('user')}}" onclick="event.preventDefault();document.getElementById('user-form').submit();"><i class="fa fa-user"></i> Usuarios</a>
+               
+                <form id="user-form" action="{{ url('user') }}" style="display:none;">{{csrf_field()}}</form>
             </li>
 
             <li class="nav-item">

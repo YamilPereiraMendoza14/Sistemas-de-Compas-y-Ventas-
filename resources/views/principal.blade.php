@@ -171,7 +171,42 @@
         modal.find('.modal-body #telefeno').val(telefeno);
         modal.find('.modal-body #email').val(email);
     })
-
+    $('#abrirEditarUsuario').on('show.bs.modal', function (event) {
+        
+        var button = $(event.relatedTarget) 
+        var id_usuario = button.data('id_usuario')
+        var nombre_modal_editar = button.data('nombre')
+        var tipo_documento_modal_editar = button.data('tipo_documento')
+        var num_documento_modal_editar = button.data('num_documento')
+        var direccion_venta_modal_editar = button.data('direccion')
+        var telefono = button.data('telefono')
+        var email = button.data('email')
+        var rol=button.data('id_rol')
+        var usuario=button.data('usuario')
+       
+        var modal = $(this)
+        console.log(nombre_modal_editar);
+        // modal.find('.modal-title').text('New message to ' + recipient)
+       
+        modal.find('.modal-body #id_usuario').val(id_usuario);        
+        modal.find('.modal-body #nombre').val(nombre_modal_editar);
+        modal.find('.modal-body #tipo_documento').val(tipo_documento_modal_editar);        
+        modal.find('.modal-body #num_documento').val(num_documento_modal_editar);
+        modal.find('.modal-body #direccion').val(direccion_venta_modal_editar);
+        modal.find('.modal-body #telefono').val(telefono);
+        modal.find('.modal-body #email').val(email);
+        modal.find('.modal-body #id_rol').val(rol);
+        modal.find('.modal-body #usuario').val(usuario);
+    })
+    $('#abrirEstadoUsuario').on('show.bs.modal', function (event) {
+        
+        var button = $(event.relatedTarget) 
+        var id_usuario = button.data('id_usuario')
+        var modal = $(this)
+   
+        // modal.find('.modal-title').text('New message to ' + recipient)
+        modal.find('.modal-body #id_usuario').val(id_usuario);
+    })
 </script>
 </body>
 
