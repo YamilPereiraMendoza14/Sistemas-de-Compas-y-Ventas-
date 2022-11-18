@@ -28,6 +28,7 @@ Route::resource('proveedor',ProveedorController::class);
 Route::resource('cliente',ClienteController::class);
 Route::resource('rol',RolController::class);
 Route::resource('user',UserController::class);
-Auth::routes();
 
+Route::get('/','App\Http\Controllers\Auth\LoginController@showLoginForm');
+Route::post('/login','App\Http\Controllers\Auth\LoginController@login')->name('login');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
