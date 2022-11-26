@@ -11,6 +11,10 @@ use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     use AuthenticatesUsers;
+    public function __construct()
+    {
+        $this->middleware('guest')->except('logout');
+    }
     protected $redirectTo = RouteServiceProvider::HOME;
 
     public function showLoginForm(){
@@ -25,5 +29,12 @@ class LoginController extends Controller
             return redirect()->route('home');
         }
         return back()->withErrors(['usuario'=>trans('auth.failed')])->withInput();
+    }
+    public function logout(Request $request){        
+        Auth::logout();
+        // $request->session()->invalidate();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect('/');
     }
 }

@@ -6,7 +6,7 @@
         <div class="card-group mb-0">
           <div class="card p-4">
           <form class="form-horizontal was-validated" method="POST" action="{{route('login')}}">
-          {{ csrf_field() }}
+                @csrf
               <div class="card-body">
               <h3 class="text-center bg-success">Compras - Ventas</h3>
              
